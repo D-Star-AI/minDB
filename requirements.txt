@@ -1,0 +1,8 @@
+faiss-cpu==1.7.4
+numpy==1.24.3
+lmdb==1.4.1
+fastapi>=0.109.1
+httpx==0.24.1
+uvicorn==0.22.0
+sphinx_rtd_theme
+sphinxcontrib-napoleon
