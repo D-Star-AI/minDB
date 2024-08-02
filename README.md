@@ -16,7 +16,7 @@ Clone the repo and run `pip install -r requirements.txt` to install all of the n
 
 For a quickstart guide, check out our getting started example [here](https://github.com/SuperpoweredAI/minDB/blob/main/examples/getting_started.ipynb).
 
-By default, all minDB databases are saved to the ~/.spdb directory. This directory is created automatically if it doesn’t exist when you initialize an minDB object. You can override this path by specifying a save_path when you create your minDB object.
+By default, all minDB databases are saved to the ~/.mindb directory. This directory is created automatically if it doesn’t exist when you initialize an minDB object. You can override this path by specifying a save_path when you create your minDB object.
 
 ## Adding and removing items
 To add vectors to your database, call the `/db/{db_name}/add` endpoint, or use the `db.add()` method. This takes a list of `(vector, metadata)` tuples, where each vector is itself a list, and each metadata item is a dictionary with keys of your choosing.
