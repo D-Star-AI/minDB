@@ -14,7 +14,7 @@ minDB uses a two-step process to perform approximate nearest neighbors search. F
 
 Clone the repo and run `pip install -r requirements.txt` to install all of the necessary packages.
 
-For a quickstart guide, check out our getting started example [here](https://github.com/SuperpoweredAI/minDB/blob/main/examples/getting_started.ipynb).
+For a quickstart guide, check out our getting started example [here](https://github.com/D-Star-AI/minDB/blob/main/examples/getting_started.ipynb).
 
 By default, all minDB databases are saved to the ~/.mindb directory. This directory is created automatically if it doesn’t exist when you initialize an minDB object. You can override this path by specifying a save_path when you create your minDB object.
 
