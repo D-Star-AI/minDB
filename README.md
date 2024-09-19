@@ -47,7 +47,7 @@ You can also learn more about FastAPI [here](https://fastapi.tiangolo.com).
 
 ## Eval
 
-To evaluate the performance of minDB, we compared it with a commonly used HNSW based vector database, ChromaDB. We used the FIQA-2018 dataset from the BEIR datasets library, found [here](https://github.com/beir-cellar/beir?tab=readme-ov-file). This dataset has 57,638 text chunks in the corpus, and 648 test queries. Embeddings were calculated on the dataset using Cohere's embed-multilingual-v2.0 model, with a vector dimension of 768.
+To evaluate the performance of minDB, we compared it with a commonly used HNSW-based vector database, ChromaDB. We used the FIQA-2018 dataset from the BEIR datasets library, found [here](https://github.com/beir-cellar/beir?tab=readme-ov-file). This dataset has 57,638 text chunks in the corpus, and 648 test queries. Embeddings were calculated on the dataset using Cohere's embed-multilingual-v2.0 model, with a vector dimension of 768.
 
 |                | minDB      | ChromaDB    |
 |----------------|------------|-------------|
