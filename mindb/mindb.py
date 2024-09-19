@@ -338,6 +338,8 @@ class minDB:
 
         logger.info('Setting the new faiss index')
         self.new_faiss_index = new_faiss_index
+        with self._faiss_lock:
+            self.faiss_index = new_faiss_index
 
         self.save()
     
