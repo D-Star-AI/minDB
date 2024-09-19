@@ -45,6 +45,20 @@ You can also learn more about FastAPI [here](https://fastapi.tiangolo.com).
 - One of the main dependencies, Faiss, doesn't play nice with Apple M1/M2 chips. You may be able to get it to work by building it from source, but we haven't successfully done so yet.
 - We haven't tested it on datasets larger than 35M vectors yet. It should still work well up to 100-200M vectors, but beyond that performance may start to deteriorate.
 
+## Eval
+
+|                | minDB      | ChromaDB    |
+|----------------|------------|-------------|
+| recall         | 0.995      | 0.923       |
+| latency        | 5.04 ms    | 3.95 ms     |
+| memory (RAM)   | 5.82 MB    | 175.9 MB    |
+
+Recall and latency are measured using a `top_k` of 20. For minDB, we used a `preliminary_top_k` of 200.
+
+Memory usage for minDB is the size of the faiss index.
+
+ChromaDB uses an HNSW index. The memory usage, in bytes per vector, for an HNSW index is `(d * 4 + M * 2 * 4)` where `d` is the dimensionality of the indexed vectors and `M` is the number of edges per node in the constructed graph. Chroma uses 16 for `M`, and the vector dimension used in this example is 768. The dataset used in this example has 57,638 vectors, giving a result of `(768 * 4 + 16 * 2 * 4) * 57638`.
+
 ## Additional documentation
 - [Tunable parameters](https://github.com/D-Star-AI/minDB/wiki/Tunable-parameters)
 - [Contributing](https://github.com/D-Star-AI/minDB/wiki/Contributing)
