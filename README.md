@@ -47,6 +47,8 @@ You can also learn more about FastAPI [here](https://fastapi.tiangolo.com).
 
 ## Eval
 
+To evaluate the performance of minDB, we compared it with a commonly used HNSW based vector database, ChromaDB. We used the FIQA-2018 dataset from the beir datasets library, found [here]('https://github.com/beir-cellar/beir?tab=readme-ov-file'). This dataset has 57,638 vectors, with a vector dimension of 768. There are 648 test queries in the dataset.
+
 |                | minDB      | ChromaDB    |
 |----------------|------------|-------------|
 | recall         | 0.995      | 0.923       |
@@ -55,7 +57,7 @@ You can also learn more about FastAPI [here](https://fastapi.tiangolo.com).
 
 Recall and latency are measured using a `top_k` of 20. For minDB, we used a `preliminary_top_k` of 200.
 
-Memory usage for minDB is the size of the faiss index.
+Memory usage for minDB is the size of the Faiss index.
 
 ChromaDB uses an HNSW index. The memory usage, in bytes per vector, for an HNSW index is `(d * 4 + M * 2 * 4)` where `d` is the dimensionality of the indexed vectors and `M` is the number of edges per node in the constructed graph. Chroma uses 16 for `M`, and the vector dimension used in this example is 768. The dataset used in this example has 57,638 vectors, giving a result of `(768 * 4 + 16 * 2 * 4) * 57638`.
 
