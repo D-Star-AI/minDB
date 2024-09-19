@@ -61,6 +61,8 @@ Memory usage for minDB is the size of the Faiss index.
 
 ChromaDB uses an HNSW index. The memory usage, in bytes per vector, for an HNSW index is `(d * 4 + M * 2 * 4)` where `d` is the dimensionality of the indexed vectors and `M` is the number of edges per node in the constructed graph. Chroma uses 16 for `M`, and the vector dimension used in this example is 768. The dataset used in this example has 57,638 vectors, giving a result of `(768 * 4 + 16 * 2 * 4) * 57638`.
 
+The eval numbers listed above came from [this notebook](https://github.com/D-Star-AI/minDB/eval/minDB_performance_eval.ipynb)
+
 ## Additional documentation
 - [Tunable parameters](https://github.com/D-Star-AI/minDB/wiki/Tunable-parameters)
 - [Contributing](https://github.com/D-Star-AI/minDB/wiki/Contributing)
