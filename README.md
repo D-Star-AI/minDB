@@ -23,6 +23,8 @@ Recall and latency are measured using a `top_k` of 20. For minDB, we used a `pre
 
 The full code used to calculate these numbers is available in [this notebook](https://github.com/D-Star-AI/minDB/blob/main/eval/minDB_performance_eval.ipynb).
 
+**To-do**: evaluate quantization options from Weaviate and Qdrant.
+
 ## Architecture overview
 minDB uses a two-step process to perform approximate nearest neighbors search. First, a highly compressed Faiss index is searched to find the `preliminary_top_k` (set to 500 by default) results. Then the full uncompressed vectors for these results are retrieved from a key-value store on disk, and a k-nearest neighbors search is performed on these vectors to arrive at the `final_top_k` results.
 
